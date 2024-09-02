@@ -34,7 +34,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={cn(`${cormorant_upright} ${open_sans}`)}>
+      <body
+        className={cn(`${cormorant_upright.variable} ${open_sans.variable}`)}
+      >
         {children}
       </body>
     </html>

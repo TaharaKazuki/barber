@@ -9,7 +9,12 @@ type BadgeProps = {
 const Badge = ({ containerStyles }: BadgeProps) => {
   return (
     <div className={cn(`relative ${containerStyles}`)}>
-      <Image src={'/assets/badge.svg'} fill alt="" />
+      <Image
+        src={'/assets/badge.svg'}
+        fill
+        alt="store badge"
+        style={{ transform: 'scale(1.5)' }} // さらに拡大したい場合
+      />
     </div>
   );
 };

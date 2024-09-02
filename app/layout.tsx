@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { Cormorant_Upright, Open_Sans } from 'next/font/google';
+
 import './globals.css';
 import { cn } from '@/lib/utils';
 

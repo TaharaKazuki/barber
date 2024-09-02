@@ -16,11 +16,13 @@
   "cSpell.words": [
     "classname",
     "clsx",
+    "gsap",
     "hookform",
     "lucide",
     "neondatabase",
     "nextjs",
     "signin",
+    "swiper",
     "tailwindcss"
   ],
   "tailwindCSS.experimental.classRegex": [

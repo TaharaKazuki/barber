@@ -13,7 +13,7 @@ const Badge = ({ containerStyles }: BadgeProps) => {
         src={'/assets/badge.svg'}
         fill
         alt="store badge"
-        style={{ transform: 'scale(1.5)' }} // さらに拡大したい場合
+        className="object-cover"
       />
     </div>
   );

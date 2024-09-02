@@ -23,7 +23,7 @@ const Hero = () => {
         <div className="flex h-full flex-1 flex-col items-center justify-center gap-10 text-center xl:pb-12">
           {/* badge */}
           <div className="flex flex-col items-center">
-            <Badge containerStyles="hidden xl:flex xl:w-[200px] xl:h-[200px]" />
+            <Badge containerStyles="hidden xl:flex xl:w-[350px] xl:h-[280px]" />
             <h1 className="h1 text-white">
               <span className="text-accent">Cut Only</span> Barber&apos;s
             </h1>

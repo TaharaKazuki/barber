@@ -4,10 +4,10 @@ import { type JSX } from 'react';
 
 const links = [
   { href: '/', name: 'Home', sub: 'ホーム' },
-  { href: '/', name: 'About', sub: '当店について' },
-  { href: '/', name: 'Menu', sub: 'メニュー' },
-  { href: '/', name: 'Questions', sub: 'よくあるご質問' },
-  { href: '/', name: 'Reserve', sub: 'ご予約について' },
+  { href: '/about', name: 'About', sub: '当店について' },
+  { href: '/menu', name: 'Menu', sub: 'メニュー' },
+  { href: '/questions', name: 'Questions', sub: 'よくあるご質問' },
+  { href: '/reserve', name: 'Reserve', sub: 'ご予約について' },
 ];
 
 const letterAnim = {
@@ -50,15 +50,15 @@ const NavList = () => {
   return (
     <ul className="flex flex-col gap-8 font-primary text-4xl font-semibold text-accent items-center uppercase">
       {links.map((link, index) => (
-        <li className="flex items-baseline gap-2">
+        <li className="flex">
           <Link
             href={link.href}
             key={index}
-            className="flex overflow-hidden hover:text-white transition-all "
+            className="flex items-baseline overflow-hidden xl:hover:text-white transition-all"
           >
             {getLetter(link.name)}
+            <span className="ml-3 text-xs">{getLetter(link.sub)}</span>
           </Link>
-          <span className="text-xs">{getLetter(link.sub)}</span>
         </li>
       ))}
     </ul>

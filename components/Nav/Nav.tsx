@@ -23,7 +23,9 @@ const Nav = () => {
       exit="close"
       className="absolute -top-full z-50 w-full overflow-hidden bg-primary"
     >
-      Nav
+      <div className="container mx-auto flex h-full items-center justify-center">
+        <NavList />
+      </div>
     </motion.div>
   );
 };

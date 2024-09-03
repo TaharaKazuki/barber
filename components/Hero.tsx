@@ -23,12 +23,12 @@ const Hero = () => {
         <div
           data-scroll
           data-scroll-speed="0.4"
-          className="flex h-full flex-1 flex-col items-center justify-center gap-10 text-center xl:pb-12"
+          className="flex h-full flex-1 flex-col items-center justify-center gap-4 text-center xl:gap-10 xl:pb-12"
         >
           {/* badge */}
           <div className="flex flex-col items-center">
             <Badge containerStyles="hidden xl:flex xl:w-[350px] xl:h-[280px]" />
-            <h1 className="h1 text-white">
+            <h1 className="h1 text-[50px] text-white xl:text-[150px]">
               <span className="text-accent">Cut Only</span> Barber&apos;s
             </h1>
           </div>

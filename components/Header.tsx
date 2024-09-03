@@ -1,8 +1,11 @@
 'use client';
 
+import { AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+
+import Nav from './Nav';
 
 const Header = () => {
   const [navActive, setNavActive] = useState<boolean>(false);
@@ -44,6 +47,8 @@ const Header = () => {
           </button>
         </div>
       </div>
+      {/* nav */}
+      <AnimatePresence mode="wait">{navActive && <Nav />}</AnimatePresence>
     </header>
   );
 };

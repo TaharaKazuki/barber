@@ -2,10 +2,11 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 const links = [
-  { href: '/', name: 'Home' },
-  { href: '/', name: 'About' },
-  { href: '/', name: 'Menu' },
-  { href: '/', name: 'Contact' },
+  { href: '/', name: 'Home', sub: 'ホーム' },
+  { href: '/', name: 'About', sub: '当店について' },
+  { href: '/', name: 'Menu', sub: 'メニュー' },
+  { href: '/', name: 'Questions', sub: 'よくあるご質問' },
+  { href: '/', name: 'Reserve', sub: 'ご予約について' },
 ];
 
 const letterAnim = {
@@ -47,8 +48,8 @@ const getLetter = (name: string) => {
 const NavList = () => {
   return (
     <ul className="flex flex-col gap-8 font-primary text-4xl font-semibold text-accent items-center uppercase">
-      {links.map((link, index) => {
-        return (
+      {links.map((link, index) => (
+        <li>
           <Link
             href={link.href}
             key={index}
@@ -56,8 +57,8 @@ const NavList = () => {
           >
             {getLetter(link.name)}
           </Link>
-        );
-      })}
+        </li>
+      ))}
     </ul>
   );
 };

@@ -1,7 +1,7 @@
 import type { Config } from 'tailwindcss';
-import { DEFAULT_CIPHERS } from 'tls';
 
 const config: Config = {
+  darkMode: ['class'],
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -36,12 +36,17 @@ const config: Config = {
         },
       },
       backgroundImage: {
-        hero_overlay: "url('/assets/hero/hero-overlay.png')",
-        opening_hours: "url('/assets/opening-hours/bg.png')",
-        footer: "url('/assets/footer/bg.png')",
+        hero_overlay: 'url(/assets/hero/hero-overlay.png)',
+        opening_hours: 'url(/assets/opening-hours/bg.png)',
+        footer: 'url(/assets/footer/bg.png)',
+      },
+      borderRadius: {
+        lg: 'var(--radius)',
+        md: 'calc(var(--radius) - 2px)',
+        sm: 'calc(var(--radius) - 4px)',
       },
     },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-animate')],
 };
 export default config;

@@ -1,26 +1,63 @@
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
-const LINKS = [
-  { href: '/', name: 'Home', sub: 'ホーム' },
-  { href: '/', name: 'About', sub: '当店について' },
-  { href: '/', name: 'Menu', sub: 'メニュー' },
-  { href: '/', name: 'Questions', sub: 'よくあるご質問' },
-  { href: '/', name: 'Reserve', sub: 'ご予約について' },
+const links = [
+  { href: '/', name: 'Home' },
+  { href: '/', name: 'About' },
+  { href: '/', name: 'Menu' },
+  { href: '/', name: 'Contact' },
 ];
+
+const letterAnim = {
+  initial: {
+    y: '100%',
+    opacity: 0,
+  },
+  enter: (i: number[]) => ({
+    y: 0,
+    opacity: 1,
+    transition: { duration: 1, ease: [0.6, 0, 0.2, 1], delay: i[0] },
+  }),
+  exit: (i: number[]) => ({
+    y: '100%',
+    opacity: 0,
+    transition: { duration: 0.8, ease: [0.6, 0, 0.2, 1], delay: i[1] },
+  }),
+};
+
+const getLetter = (name: string) => {
+  let letters = [] as any;
+  name.split('').forEach((letter, index) => {
+    letters.push(
+      <motion.span
+        variants={letterAnim}
+        initial="initial"
+        animate="enter"
+        exit="exit"
+        custom={[index * 0.04, (name.length - index) * 0.01]}
+        key={index}
+      >
+        {letter}
+      </motion.span>
+    );
+  });
+  return letters;
+};
 
 const NavList = () => {
   return (
-    <ul className="flex flex-col items-center gap-8 font-primary text-4xl font-semibold text-accent uppercase">
-      {LINKS.map((link, i) => (
-        <Link
-          href={link.href}
-          key={i}
-          className="flex items-baseline gap-2 overflow-hidden transition-all duration-300 hover:text-white"
-        >
-          {link.name}
-          <span className="text-xs">{link.sub}</span>
-        </Link>
-      ))}
+    <ul className="flex flex-col gap-8 font-primary text-4xl font-semibold text-accent items-center uppercase">
+      {links.map((link, index) => {
+        return (
+          <Link
+            href={link.href}
+            key={index}
+            className="flex overflow-hidden hover:text-white transition-all"
+          >
+            {getLetter(link.name)}
+          </Link>
+        );
+      })}
     </ul>
   );
 };

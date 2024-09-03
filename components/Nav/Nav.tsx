@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 
+import NavList from './NavList';
+
 const heightAnimation = {
   initial: {
     height: 0,

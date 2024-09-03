@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
-import Nav from './Nav';
+import Nav from './Nav/Nav';
 
 const Header = () => {
   const [navActive, setNavActive] = useState<boolean>(false);

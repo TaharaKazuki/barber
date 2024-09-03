@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Cormorant_Upright, Open_Sans } from 'next/font/google';
 
 import './globals.css';
+import Header from '@/components/Header';
 import { cn } from '@/lib/utils';
 
 const cormorant_upright = Cormorant_Upright({
@@ -38,6 +39,7 @@ export default function RootLayout({
       <body
         className={cn(`${cormorant_upright.variable} ${open_sans.variable}`)}
       >
+        <Header />
         {children}
       </body>
     </html>

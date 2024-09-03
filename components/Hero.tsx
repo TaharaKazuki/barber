@@ -36,9 +36,10 @@ const Hero = () => {
           {/* separator */}
           <Separator />
           <p className="lead mb-4 max-w-[300px] text-xs font-light md:max-w-[430px] xl:max-w-[560px] xl:text-base">
-            格好よくなりたい・悩みを解決したい・ 仕事終わりに切りたい等、
+            カッコよくなりたい・髪型の悩みを解決したい・ 仕事終わりに切りたい
+            etc...
             <br />
-            様々なお客様の要望の1つ1つにお応えし最高の接遇を心がけております。
+            お客様の要望にお応えし最高の接遇を心がけております。
           </p>
           <button className="btn text-base">
             Reserve <span className="text-xs underline">ご予約はこちら</span>

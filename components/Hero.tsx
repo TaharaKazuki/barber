@@ -20,7 +20,11 @@ const Hero = () => {
       </video>
       {/* HP Name */}
       <div className="container relative z-30 mx-auto flex h-full flex-col items-center xl:flex-row">
-        <div className="flex h-full flex-1 flex-col items-center justify-center gap-10 text-center xl:pb-12">
+        <div
+          data-scroll
+          data-scroll-speed="0.4"
+          className="flex h-full flex-1 flex-col items-center justify-center gap-10 text-center xl:pb-12"
+        >
           {/* badge */}
           <div className="flex flex-col items-center">
             <Badge containerStyles="hidden xl:flex xl:w-[350px] xl:h-[280px]" />
@@ -31,9 +35,10 @@ const Hero = () => {
 
           {/* separator */}
           <Separator />
-          <p className="lead mb-4 max-w-[300px] font-light md:max-w-[430px] xl:max-w-[560px]">
-            Experience the joy of exceptional coffee in our cozy space, where
-            every cup is crafted with passion and warmth
+          <p className="lead mb-4 max-w-[300px] text-xs font-light md:max-w-[430px] xl:max-w-[560px] xl:text-base">
+            格好よくなりたい・悩みを解決したい・ 仕事終わりに切りたい等、
+            <br />
+            様々なお客様の要望の1つ1つにお応えし最高の接遇を心がけております。
           </p>
           <button className="btn text-base">
             Reserve <span className="text-xs underline">ご予約はこちら</span>

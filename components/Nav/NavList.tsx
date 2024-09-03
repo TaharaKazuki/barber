@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { type JSX } from 'react';
 
 const links = [
   { href: '/', name: 'Home', sub: 'ホーム' },
@@ -27,7 +28,7 @@ const letterAnim = {
 };
 
 const getLetter = (name: string) => {
-  let letters = [] as any;
+  let letters = [] as JSX.Element[];
   name.split('').forEach((letter, index) => {
     letters.push(
       <motion.span
@@ -49,14 +50,15 @@ const NavList = () => {
   return (
     <ul className="flex flex-col gap-8 font-primary text-4xl font-semibold text-accent items-center uppercase">
       {links.map((link, index) => (
-        <li>
+        <li className="flex items-baseline gap-2">
           <Link
             href={link.href}
             key={index}
-            className="flex overflow-hidden hover:text-white transition-all"
+            className="flex overflow-hidden hover:text-white transition-all "
           >
             {getLetter(link.name)}
           </Link>
+          <span className="text-xs">{getLetter(link.sub)}</span>
         </li>
       ))}
     </ul>

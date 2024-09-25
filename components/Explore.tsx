@@ -99,12 +99,12 @@ const Explore = () => {
                 </div>
                 <h3 className="mb-4 font-primary text-3xl font-bold xl:text-4xl">
                   {`Women's Cut`}
-                  <span className="ml-2 text-xs">レディース</span>
+                  <span className="ml-2 text-xs">レディースカット</span>
                 </h3>
                 <p className="max-w-[400px]">
                   <p>¥2,000</p>
                   <p>※平日の15時まで受付可</p>
-                  <p>※平日の15時以降土日・祝は男性のみ施術となります</p>
+                  <p>平日の15時以降、土日祝は男性のみ施術となります</p>
                   <p>予めご了承ください</p>
                 </p>
               </div>

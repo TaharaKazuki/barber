@@ -7,7 +7,7 @@ const Explore = () => {
         <div className="flex w-full flex-col gap-12 lg:flex-row xl:gap-20">
           <div className="mx-auto flex max-w-[400px] flex-1 flex-col items-end justify-around gap-12 text-center xl:mx-0 xl:max-w-none xl:gap-0 xl:text-left">
             {/* item 1 */}
-            <div className="relative flex items-start">
+            <div className="relative flex w-full items-start justify-center xl:justify-end">
               <div className="xl:flex xl:max-w-[420px] xl:flex-col xl:items-end xl:text-right">
                 <div className="mb-6 flex items-center justify-center">
                   <Image
@@ -24,12 +24,12 @@ const Explore = () => {
                 <p className="max-w-[400px]">
                   ¥1,700 ※眉毛・耳毛カット付き
                   <br />
-                  ※平日シニア割引（65歳以上）¥1,500円
+                  ※平日シニア割引（65歳以上）¥1,500
                 </p>
               </div>
             </div>
             {/* item 2 */}
-            <div className="relative flex items-start">
+            <div className="relative flex w-full items-start justify-center xl:justify-end">
               <div className="xl:flex xl:max-w-[420px] xl:flex-col xl:items-end xl:text-right">
                 <div className="mb-6 flex items-center justify-center">
                   <Image
@@ -69,7 +69,7 @@ const Explore = () => {
 
           <div className="mx-auto flex max-w-[400px] flex-1 flex-col justify-around gap-12 text-center xl:mx-0 xl:max-w-none xl:gap-0 xl:text-left">
             {/* item 3 */}
-            <div className="relative flex items-start">
+            <div className="relative flex w-full items-start justify-center xl:justify-start">
               <div className="xl:flex xl:max-w-[420px] xl:flex-col xl:items-start xl:text-left">
                 <div className="mb-6 flex items-center justify-center">
                   <Image
@@ -80,17 +80,14 @@ const Explore = () => {
                   />
                 </div>
                 <h3 className="mb-4 font-primary text-3xl font-bold xl:text-4xl">
-                  Smooth Cold Brews
+                  Circular cut
+                  <span className="ml-2 text-xs">丸刈り</span>
                 </h3>
-                <p className="max-w-[400px]">
-                  Refresh yourself with our smooth and invigorating cold brew
-                  options. Ideal for those warm days when you need a cool,
-                  caffeinated boost.
-                </p>
+                <p className="max-w-[400px]">¥1,500 ※シニア割引不可</p>
               </div>
             </div>
             {/* item 4 */}
-            <div className="relative flex items-start">
+            <div className="relative flex w-full items-start justify-center xl:justify-start">
               <div className="xl:flex xl:max-w-[420px] xl:flex-col xl:items-start xl:text-left">
                 <div className="mb-6 flex items-center justify-center">
                   <Image
@@ -101,12 +98,14 @@ const Explore = () => {
                   />
                 </div>
                 <h3 className="mb-4 font-primary text-3xl font-bold xl:text-4xl">
-                  Flavorful Latte Varieties
+                  {`Women's Cut`}
+                  <span className="ml-2 text-xs">レディース</span>
                 </h3>
                 <p className="max-w-[400px]">
-                  Experience the rich and creamy flavors of our diverse latte
-                  selections. From vanilla to caramel, we have a latte to suit
-                  every taste.
+                  <p>¥2,000</p>
+                  <p>※平日の15時まで受付可</p>
+                  <p>※平日の15時以降土日・祝は男性のみ施術となります</p>
+                  <p>予めご了承ください</p>
                 </p>
               </div>
             </div>

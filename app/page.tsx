@@ -3,8 +3,8 @@
 import { useEffect } from 'react';
 
 // components
-import Hero from '@/components/Hero';
 import Explore from '@/components/Explore';
+import Hero from '@/components/Hero';
 
 const Home = () => {
   useEffect(() => {

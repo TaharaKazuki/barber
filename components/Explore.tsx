@@ -18,12 +18,13 @@ const Explore = () => {
                   />
                 </div>
                 <h3 className="mb-4 font-primary text-3xl font-bold xl:text-4xl">
-                  Rich Espresso Blends
+                  {`Men's Cut`}
+                  <span className="ml-2 text-xs">メンズカット</span>
                 </h3>
                 <p className="max-w-[400px]">
-                  Indulge in the deep, robust flavors of our expertly crafted
-                  espresso blends. Perfect for a quick pick-me-up or a leisurely
-                  afternoon treat.
+                  ¥1,700 ※眉毛・耳毛カット付き
+                  <br />
+                  ※平日シニア割引（65歳以上）¥1,500円
                 </p>
               </div>
             </div>
@@ -39,12 +40,12 @@ const Explore = () => {
                   />
                 </div>
                 <h3 className="mb-4 font-primary text-3xl font-bold xl:text-4xl">
-                  Classic Drip Coffee
+                  Fade cut/Skin fade
+                  <span className="ml-2 text-xs">フェード・スキンフェード</span>
                 </h3>
                 <p className="max-w-[400px]">
-                  Enjoy the comforting taste of our classic drip coffee, brewed
-                  to perfection. A timeless choice for coffee enthusiasts who
-                  appreciate simplicity.
+                  <p>※フェード(0.3ミリ〜) +¥500</p>
+                  <p>※スキンフェード(0ミリ〜) +¥1,000</p>
                 </p>
               </div>
             </div>
@@ -54,7 +55,7 @@ const Explore = () => {
           <div className="hidden justify-center xl:flex">
             <div className="relative h-[580px] w-[322px]">
               <Image
-                src="/assets/explore/cup.png"
+                src="/assets/explore/cut_only.png"
                 fill
                 alt=""
                 className="object-cover"

@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { type JSX } from 'react';
 
 const links = [
@@ -48,13 +48,13 @@ const getLetter = (name: string) => {
 
 const NavList = () => {
   return (
-    <ul className="flex flex-col gap-8 font-primary text-4xl font-semibold text-accent items-center uppercase">
+    <ul className="flex flex-col items-center gap-8 font-primary text-4xl font-semibold uppercase text-accent">
       {links.map((link, index) => (
-        <li className="flex">
+        <li key={index} className="flex">
           <Link
             href={link.href}
             key={index}
-            className="flex items-baseline overflow-hidden xl:hover:text-white transition-all"
+            className="flex items-baseline overflow-hidden transition-all xl:hover:text-white"
           >
             {getLetter(link.name)}
             <span className="ml-3 text-xs">{getLetter(link.sub)}</span>
